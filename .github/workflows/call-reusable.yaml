@@ -1,0 +1,12 @@
+name: Call Reusable Workflow
+on:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  use-reusable:
+    uses: andreimu/github-actions/.github/workflows/reusable-test.yaml@main
+    with:
+      cool_var: "amazing"
